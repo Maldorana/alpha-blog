@@ -1,5 +1,67 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-    background-color: #e0e9fd !important;
+    background-color: #343a40 !important;
+}
+
+.nav-link {
+    color: #e0e0e0 !important;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    color: #ffffff !important;
+}
+
+.navbar-light .navbar-brand {
+    color: #ffffff !important;
+    padding-right: 0.75rem !important;
+    font-weight: bold !important;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 0.75rem !important;
+}
+
+#home-container {
+    max-width: 1320px;
+    margin-top: 1.75rem;
+}
+
+.col-auto, .col-md-6 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.p-md-5 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .col-md-6 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .p-md-5 {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
+}
+
+.mb-2 {
+    margin-bottom: 0 !important;
+}
+
+footer > .container {
+    text-align: center;
+}
+
+.bg-dark {
+    background-image: url("https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80") !important;
 }
