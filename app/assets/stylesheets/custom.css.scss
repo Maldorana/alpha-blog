@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap');
 
 html,
 body {
@@ -79,4 +80,14 @@ footer > .container {
 
 #full-btn > .btn {
     width: 100% !important;
+}
+
+.blog-post-title {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+    font-weight: 600;
+}
+
+.blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #727272;
 }
