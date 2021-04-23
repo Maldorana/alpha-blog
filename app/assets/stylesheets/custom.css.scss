@@ -1,5 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html,
+body {
+    height: 100%;
+}
+
 .navbar {
     background-color: #343a40 !important;
 }
@@ -53,10 +58,6 @@
     }
 }
 
-.mb-2 {
-    margin-bottom: 0 !important;
-}
-
 footer > .container {
     text-align: center;
 }
@@ -68,10 +69,15 @@ footer > .container {
 #page-content {
     background-color: #f0efef;
     padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
     flex: 1 0 auto;
 }
 
 #sticky-footer {
     flex-shrink: none;
+}
+
+#full-btn > .btn {
+    width: 100% !important;
 }
 
