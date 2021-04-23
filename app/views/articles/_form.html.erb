@@ -1,6 +1,7 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-8">
+        <%= render 'shared/errors' %>
         <%= form_with(model: @article, local: true) do |f| %>
 
             <div class="mb-3 row">
