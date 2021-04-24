@@ -19,9 +19,9 @@ body {
     color: #ffffff !important;
 }
 
-.navbar-light .navbar-brand {
+.navbar-dark .navbar-brand {
     color: #ffffff !important;
-    padding-right: 0.75rem !important;
+    padding-right: 0.25rem !important;
     font-weight: bold !important;
 }
 
@@ -31,6 +31,14 @@ body {
 
 #home-container {
     max-width: 1320px;
+}
+
+#home-container > .bg-dark {
+    background-image: url("https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80") !important;
+}
+
+#about-container {
+    max-width: 900px;
 }
 
 .col-auto, .col-md-6 {
@@ -63,10 +71,6 @@ footer > .container {
     text-align: center;
 }
 
-.bg-dark {
-    background-image: url("https://images.unsplash.com/photo-1483982258113-b72862e6cff6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80") !important;
-}
-
 #page-content {
     background-color: #f0efef;
     padding-top: 1.75rem;
@@ -90,4 +94,12 @@ footer > .container {
 .blog-post-meta {
     margin-bottom: 1.25rem;
     color: #727272;
+}
+
+.row > .col-12 {
+    max-width: 46rem;
+}
+
+.dropdown-menu > .nav-link {
+    color: rgb(0, 0, 0) !important;
 }
