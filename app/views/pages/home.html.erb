@@ -3,7 +3,7 @@
     <div class="col-md-8 px-0">
       <h1 class="display-4 fst-italic"><%= Article.find(1).title %></h1>
       <p class="lead my-3"><%= truncate(Article.find(1).description, length: 180) %></p>
-      <button type="button" class="btn btn-primary">Continue reading</button>    
+      <a role="button" href="<%= article_path(Article.find(1)) %>" class="btn btn-primary">Continue reading</a>    
     </div>
     </div>
     <div class="row">
@@ -13,7 +13,7 @@
               <h3 class="mb-0"><%= Article.find(2).title %></h3>
               <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(2).created_at) %> ago</div>
               <p class="card-text mb-auto"><%= truncate(Article.find(2).description, length: 180) %></p>
-              <a href="#" class="stretched-link">Continue reading...</a>
+              <a href="<%= article_path(Article.find(2)) %>" class="stretched-link">Continue reading...</a>
             </div>
             <div class="col-auto d-none d-lg-block" style="width: 200px; height: 250px; overflow: hidden">
               <img src="https://images.unsplash.com/photo-1520082379916-7cf029de2c1f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1867&q=80" height="100%" align="middle" alt="">
@@ -26,7 +26,7 @@
               <h3 class="mb-0"><%= Article.find(3).title %></h3>
               <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(3).created_at) %> ago</div>
               <p class="mb-auto"><%= truncate(Article.find(3).description, length: 180) %></p>
-              <a href="#" class="stretched-link">Continue reading...</a>
+              <a href="<%= article_path(Article.find(3)) %>" class="stretched-link">Continue reading...</a>
             </div>
             <div class="col-auto d-none d-lg-block" style="width: 200px; height: 250px; overflow: hidden">
                 <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1441&q=80" height="100%" align="middle" alt="">
@@ -41,7 +41,7 @@
               <h3 class="mb-0"><%= Article.find(4).title %></h3>
               <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(4).created_at) %> ag</div>
               <p class="card-text mb-auto"><%= truncate(Article.find(4).description, length: 180) %></p>
-              <a href="#" class="stretched-link">Continue reading...</a>
+              <a href="<%= article_path(Article.find(4)) %>" class="stretched-link">Continue reading...</a>
             </div>
             <div class="col-auto d-none d-lg-block" style="width: 200px; height: 250px; overflow: hidden">
                 <img src="https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1866&q=80" height="100%" align="left" alt="">
@@ -54,7 +54,7 @@
               <h3 class="mb-0"><%= Article.find(5).title %></h3>
               <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(5).created_at) %> ag</div>
               <p class="mb-auto"><%= truncate(Article.find(5).description, length: 180) %></p>
-              <a href="#" class="stretched-link">Continue reading...</a>
+              <a href="<%= article_path(Article.find(5)) %>" class="stretched-link">Continue reading...</a>
             </div>
             <div class="col-auto d-none d-lg-block" style="width: 200px; height: 250px; overflow: hidden">
                 <img src="https://images.unsplash.com/photo-1493612276216-ee3925520721?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" height="100%" align="left" alt="">
