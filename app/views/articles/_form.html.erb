@@ -1,17 +1,17 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-8">
-        <%= render 'shared/errors' %>
+        <%= render 'shared/errors', obj: @article %>
         <%= form_with(model: @article, local: true) do |f| %>
 
             <div class="mb-3 row">
                 <%= f.label :title, class: "form-label" %>
-                <%= f.text_field :title, class: "form-control shadow-sm" %>
+                <%= f.text_field :title, class: "form-control shadow-sm", placeholder: "Enter your title" %>
             </div>
 
             <div class="mb-3 row">
                 <%= f.label :description, class: "form-label" %></br>
-                <%= f.text_area :description, rows: 10, class: "form-control shadow-sm" %>
+                <%= f.text_area :description, rows: 10, class: "form-control shadow-sm", placeholder: "Enter your description" %>
             </div>
 
             <div class="mb-3 row justify-content-center" id="full-btn">
