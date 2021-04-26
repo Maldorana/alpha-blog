@@ -1,7 +1,7 @@
 <h1 class="text-center">Articles listing page</h1>
 <div class="container">
     <% @articles.each do |article| %>
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center" id="article">
             <div class="col-12 mt-4">
                 <div class="card text-center shadow-sm">
                   <div class="card-header font-italic">
@@ -22,7 +22,7 @@
             </div>
         </div>
     <% end %>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="new-btn">
         <div class="col-12 mt-4" id="full-btn">
             <%= link_to 'New article', new_article_path, class: "btn btn-primary btn-lg" %>
         </div>

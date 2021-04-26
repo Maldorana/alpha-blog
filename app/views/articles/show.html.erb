@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container" id="big-container">
     <div class="row justify-content-center">
-        <div class="col-10 card p-4 shadow-sm" id="article">
+        <div class="col-12 card p-4 shadow-sm" id="article">
             <article class="blog-post">
                 <h2 class="blog-post-title"><%= @article.title %></h2>
-                <p class="blog-post-meta">Posted <%= time_ago_in_words(@article.created_at) %> ago by <a href="#"><%= @article.user.username if article.user %></a></p>
+                <p class="blog-post-meta">Posted <%= time_ago_in_words(@article.created_at) %> ago by <a href="#"><%= @article.user.username if @article.user %></a></p>
                 <p><%= simple_format(@article.description) %></p>
                 <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-primary" %>
                 <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-primary" %>

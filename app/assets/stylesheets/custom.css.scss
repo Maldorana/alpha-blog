@@ -29,8 +29,8 @@ body {
     padding-left: 0.75rem !important;
 }
 
-#home-container {
-    max-width: 1320px;
+#big-container {
+    max-width: 1320px !important;
 }
 
 #home-container > .bg-dark {
@@ -96,8 +96,28 @@ footer > .container {
     color: #727272;
 }
 
-.row > .col-12 {
+#article > .col-12 {
     max-width: 60rem;
+}
+
+#new-btn > .col-12 {
+    max-width: 60rem;
+}
+
+#messages > .col-12 {
+    max-width: 1320px;
+}
+
+#message > .alert {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+@media only screen and (min-width: 768px) {
+    #message > .alert {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
 }
 
 .dropdown-menu > .nav-link {
