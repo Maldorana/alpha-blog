@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-
-    before_action :set_user, only: [:show, :edit, :update, :destroy]
+    before_action :set_user, only: [:show, :edit, :update]
 
     def show
         @articles = @user.articles.paginate(page: params[:page], per_page: 5)    end
@@ -16,8 +15,9 @@ class UsersController < ApplicationController
     def create
         @user = User.new(whitelist)
         if @user.save
+            session[:user_id] = @user.id
             flash[:notice] = "Welcome to the Alpha Blog, #{@user.username}. Your account has been successfully created."
-            redirect_to @user
+            redirect_to root_path
         else
             render 'new'
         end

@@ -29,7 +29,7 @@ body {
     padding-left: 0.75rem !important;
 }
 
-#big-container {
+.big-container {
     max-width: 1320px !important;
 }
 
@@ -46,9 +46,14 @@ body {
     padding-right: 0 !important;
 }
 
-.row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+#article-show-container .row {
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+}
+
+#home-container .row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
 }
 
 .p-md-5 {

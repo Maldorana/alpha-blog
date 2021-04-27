@@ -25,15 +25,24 @@
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <%= link_to "Log out", logout_path, class: "nav-link", method: :delete %>
-            </li>
-            <li class="nav-item">
-                <%= link_to "Log in", login_path, class: "nav-link" %>
-            </li>
-            <li class="nav-item ml-3">
-                <%= link_to "Sign up", signup_path, class: "btn btn-primary" %>
-            </li>
+            <% if logged_in? %>
+                <li class="nav-item">
+                    <%= link_to "#{current_user.username}", user_path(current_user), class: "nav-link font-weight-bold" %>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">-</a>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "Log out", logout_path, class: "nav-link", method: :delete %>
+                </li>
+            <% else %>
+                <li class="nav-item">
+                    <%= link_to "Log in", login_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item ml-3">
+                    <%= link_to "Sign up", signup_path, class: "btn btn-primary" %>
+                </li>
+            <% end %>
         </ul>
       </form>
     </div>
