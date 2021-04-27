@@ -1,0 +1,26 @@
+<h1 class="text-center">Log in</h1>
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-8">
+        <%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+
+            <div class="mb-3 row">
+                <%= f.label :email, class: "form-label" %></br>
+                <%= f.email_field :email, class: "form-control shadow-sm", placeholder: "Enter your email address" %>
+            </div>
+
+            <div class="mb-3 row">
+                <%= f.label :password, class: "form-label" %></br>
+                <%= f.password_field :password, class: "form-control shadow-sm", placeholder: "Enter your password" %>
+            </div>
+
+            <div class="mb-3 row justify-content-center" id="full-btn">
+                <%= f.submit "Log in", class: "btn btn-primary btn-lg shadow-sm" %>
+            </div>
+
+            <%= link_to 'Cancel and return to your profile', @user, class: "row justify-content-center" %>
+
+        <% end %>
+        </div>
+    </div>
+</div>
