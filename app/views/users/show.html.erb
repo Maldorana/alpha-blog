@@ -16,4 +16,10 @@
     <%= will_paginate @articles, :container => false %>
 </div>
 
-
+<% if logged_in? && @user == current_user %>
+    <div class="row">
+        <div class="col-12 text-center justify-content-center">
+            <%= link_to 'Delete account and all articles', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-muted mb-4" %>
+        </div>
+    </div>
+<% end %>
