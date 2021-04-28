@@ -5,7 +5,7 @@
                 <h2 class="blog-post-title"><%= @article.title %></h2>
                 <p class="blog-post-meta">Posted <%= time_ago_in_words(@article.created_at) %> ago by <a href=<%= user_path(@article.user) %>><%= @article.user.username if @article.user %></a></p>
                 <p><%= simple_format(@article.description) %></p>
-                <% if logged_in? && @article.user == current_user %>
+                <% if logged_in? && (@article.user == current_user || current_user.admin? == true) %>
                     <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-outline-primary" %>
                     <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-primary" %>
                 <% end %>

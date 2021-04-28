@@ -2,7 +2,7 @@
 
 <%= gravatar_for(@user, 150) %>
 
-<% if logged_in? && @user == current_user %>
+<% if logged_in? && (@user == current_user || current_user.admin? == true) %>
     <div class="text-center mt-4">
         <%= link_to 'Edit profile', edit_user_path(@user), class: "btn btn-outline-primary btn-lg" %>
     </div>
@@ -16,7 +16,7 @@
     <%= will_paginate @articles, :container => false %>
 </div>
 
-<% if logged_in? && @user == current_user %>
+<% if logged_in? && (@user == current_user || current_user.admin? == true) %>
     <div class="row">
         <div class="col-12 text-center justify-content-center">
             <%= link_to 'Delete account and all articles', user_path(@user), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-muted mb-4" %>
