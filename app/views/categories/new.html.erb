@@ -1,0 +1,23 @@
+<h1 class="text-center"></h1>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-8">
+        <%= render 'shared/errors', obj: @category %>
+        <%= form_with(model: @category, local: true) do |f| %>
+
+            <div class="mb-3 row">
+                <%= f.label :name, "Category name", class: "form-label" %>
+                <%= f.text_field :name, class: "form-control shadow-sm", placeholder: "Choose category name" %>
+            </div>
+
+            <div class="mb-3 row justify-content-center" id="full-btn">
+                    <%= f.submit "Create category", class: "btn btn-primary btn-lg shadow-sm" %>
+            </div>
+
+            <%= link_to 'Cancel and return to all categories', @category, class: "row justify-content-center" %>
+
+        <% end %>
+        </div>
+    </div>
+</div>
