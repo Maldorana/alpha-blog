@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
         @category = Category.new(whitelist)
         if @category.save
             flash[:notice] = "Category was created successfully"
-            redirect_to @category
+            redirect_to categories_path
         else
             render 'new'
         end
@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
     end
 
     def index
-
+        @categories = Category.paginate(page: params[:page], per_page: 10)
     end
 
     private
