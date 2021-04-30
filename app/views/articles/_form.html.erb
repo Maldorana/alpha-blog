@@ -14,6 +14,12 @@
                 <%= f.text_area :description, rows: 10, class: "form-control shadow-sm", placeholder: "Enter your description" %>
             </div>
 
+            <div class="mb-3 row">
+                <%= f.label "Choose categories below", class: "form-label" %></br>
+                <%= f.collection_select(:category_ids, Category.all, :id, :name,
+                { prompt: nil}, { multiple: true, size: Category.count, class: "custom-select shadow-sm" }) %>
+            </div>
+
             <div class="mb-3 row justify-content-center" id="full-btn">
                     <%= f.submit nil, class: "btn btn-primary btn-lg shadow-sm" %>
             </div>
