@@ -19,10 +19,12 @@
         <%= will_paginate @users, :container => false %>
     </div>
 </div>
-<div class="container" id="categories-container">
-    <div class="row justify-content-center" id="new-btn">
-        <div class="col-12 mt-4" id="full-btn">
-            <%= link_to 'New category', new_category_path, class: "btn btn-primary btn-lg" %>
+<% if logged_in? && current_user.admin? %>
+    <div class="container" id="categories-container">
+        <div class="row justify-content-center" id="new-btn">
+            <div class="col-12 mt-4" id="full-btn">
+                <%= link_to 'New category', new_category_path, class: "btn btn-primary btn-lg" %>
+            </div>
         </div>
     </div>
-</div>
+<% end %>
