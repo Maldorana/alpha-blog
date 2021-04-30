@@ -2,6 +2,9 @@
     <div class="row justify-content-center">
         <div class="col-12 card p-4 shadow-sm" id="article">
             <article class="blog-post">
+                <% if @article.categories.any? %>
+                    <div class="mb-3"><%= render @article.categories %></div> 
+                <% end %>
                 <h2 class="blog-post-title"><%= @article.title %></h2>
                 <p class="blog-post-meta">Posted <%= time_ago_in_words(@article.created_at) %> ago by <a href=<%= user_path(@article.user) %>><%= @article.user.username if @article.user %></a></p>
                 <p><%= simple_format(@article.description) %></p>
