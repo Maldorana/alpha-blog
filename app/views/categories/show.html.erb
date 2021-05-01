@@ -1,1 +1,23 @@
-<h1 class="text-center"><%= @category.name %></h1>
+<h1 class="text-center mb-4"> <%= @category.name %></h1>
+
+<% if logged_in? && current_user.admin? == true %>
+    <div class="text-center mt-4">
+        <%= link_to 'Edit category', edit_category_path(@category), class: "btn btn-outline-primary btn-lg" %>
+    </div>
+<% end %>
+
+<h3 class="text-center mt-4">Related articles</h3>
+
+<%= render 'articles/articles' %>
+
+<div class="flickr_pagination mt-4 <%= @articles.count > 5 ? "mb-4" : "" %>">
+    <%= will_paginate @articles, :container => false %>
+</div>
+
+<% if logged_in? && current_user.admin? == true %>
+    <div class="row">
+        <div class="col-12 text-center justify-content-center">
+            <%= link_to 'Delete category', root_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-muted mb-4" %>
+        </div>
+    </div>
+<% end %>
