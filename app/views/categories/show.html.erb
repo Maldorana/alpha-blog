@@ -17,7 +17,7 @@
 <% if logged_in? && current_user.admin? == true %>
     <div class="row">
         <div class="col-12 text-center justify-content-center">
-            <%= link_to 'Delete category', root_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "text-muted mb-4" %>
+            <%= link_to 'Delete category', category_path(@category), method: :delete, data: { confirm: 'Are you sure?' }, class: "text-muted mb-4" %>
         </div>
     </div>
 <% end %>
