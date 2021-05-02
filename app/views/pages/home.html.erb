@@ -39,7 +39,7 @@
           <div class="row g-0 border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static bg-white">
               <h3 class="mb-0"><%= Article.find(4).title %></h3>
-              <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(4).created_at) %> ag</div>
+              <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(4).created_at) %> ago</div>
               <p class="card-text mb-auto"><%= truncate(Article.find(4).description, length: 180) %></p>
               <a href="<%= article_path(Article.find(4)) %>" class="stretched-link">Continue reading...</a>
             </div>
@@ -52,7 +52,7 @@
           <div class="row g-0 border rounded overflow-hidden flex-md-row mt-4 shadow-sm h-md-250 position-relative">
             <div class="col p-4 d-flex flex-column position-static bg-white">
               <h3 class="mb-0"><%= Article.find(5).title %></h3>
-              <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(5).created_at) %> ag</div>
+              <div class="mb-1 text-muted"><%= time_ago_in_words(Article.find(5).created_at) %> ago</div>
               <p class="mb-auto"><%= truncate(Article.find(5).description, length: 180) %></p>
               <a href="<%= article_path(Article.find(5)) %>" class="stretched-link">Continue reading...</a>
             </div>
