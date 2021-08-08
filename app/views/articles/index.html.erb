@@ -3,10 +3,12 @@
 <div class="flickr_pagination mt-4 <%= @articles.count > 5 ? "mb-4" : "" %>">
     <%= will_paginate @articles, :container => false %>
 </div>
-<div class="container">
-    <div class="row justify-content-center" id="new-btn">
-        <div class="col-12" id="full-btn">
-            <%= link_to 'New article', new_article_path, class: "btn btn-primary btn-lg" %>
+<% if logged_in? %>
+    <div class="container">
+        <div class="row justify-content-center" id="new-btn">
+            <div class="col-12" id="full-btn">
+                <%= link_to 'New article', new_article_path, class: "btn btn-primary btn-lg" %>
+            </div>
         </div>
     </div>
-</div>
+<% end %>
