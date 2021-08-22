@@ -1,24 +1,22 @@
-# README
+## ALPHA BLOG
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My very first Ruby on Rails project: A Simple but efficient blog. Users can find and read articles by tag or author as well as write, edit and delete their own. Administrators can edit and delete any articles.
 
-Things you may want to cover:
+## APP DIRECT LINK
 
-* Ruby version
+[App live on Heroku](https://alpha-blog-on-rails.herokuapp.com/)
 
-* System dependencies
+## TECHNOLOGIES USED
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby
+* Ruby on Rails
+* Postgresql
+* bcrypt
+* Bootstrap
+* HTML5
+* CSS3
+* Javascript
+* jQuery
+* AJAX
+* Git
+* Heroku
